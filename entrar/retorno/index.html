@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Voltando ao Modo Seca</title>
+<style>
+:root{--bg:#F4F6F4;--ink:#142019;--muted:#55635A;--acc:#2B50E8}
+@media (prefers-color-scheme:dark){:root{--bg:#0D1310;--ink:#EEF2EF;--muted:#A3B0A7;--acc:#829BFF}}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;display:flex;align-items:center}
+main{width:100%;max-width:440px;margin:0 auto;padding:32px 16px;text-align:center}
+h1{font-size:24px;margin:0 0 10px}
+p{color:var(--muted);margin:0 0 18px}
+a.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:14px;background:var(--acc);color:#fff;font-weight:600;text-decoration:none}
+a.btn[hidden]{display:none}
+</style>
+</head>
+<body>
+<main>
+<h1 id="h">Voltando ao Modo Seca…</h1>
+<p id="msg">Só um instante.</p>
+<a id="back" class="btn" hidden href="#">Abrir o Modo Seca</a>
+</main>
+<script>
+(function () {
+  var p = new URLSearchParams((location.hash || '').slice(1) || location.search.slice(1));
+  var q = new URLSearchParams();
+  if (p.get('state')) q.set('s', p.get('state'));
+  if (p.get('id_token')) q.set('t', p.get('id_token'));
+  if (p.get('error')) q.set('e', p.get('error'));
+  history.replaceState(null, '', location.pathname);
+  if (!q.get('s')) { document.getElementById('h').textContent = 'Abra o Modo Seca'; document.getElementById('msg').textContent = 'Esta página só funciona pelo botão "Entrar com Google" do app.'; return; }
+  var url = 'intent://login?' + q.toString() + '#Intent;scheme=modoseca;package=com.luizigerski.modoseca;end';
+  var a = document.getElementById('back');
+  a.href = url;
+  try { location.replace(url); } catch (e) {}
+  setTimeout(function () { document.getElementById('msg').textContent = 'Se o app não abrir sozinho, toque no botão.'; a.hidden = false; }, 900);
+})();
+</script>
+</body>
+</html>
