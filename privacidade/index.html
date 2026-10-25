@@ -37,6 +37,7 @@ footer{margin-top:48px;color:var(--muted);font-size:15px}
 <ul>
 <li>O Modo Seca não tem login, não tem servidor e não usa a internet.</li>
 <li>Tudo o que você registra fica guardado só no seu celular.</li>
+<li>A foto do prato só sai do celular se você escolher enviá-la ao app Claude.</li>
 <li>Nós não coletamos, não vemos, não vendemos e não compartilhamos nenhum dado seu.</li>
 <li>Não há anúncios nem ferramentas de análise ou rastreamento.</li>
 </ul>
@@ -61,6 +62,7 @@ footer{margin-top:48px;color:var(--muted);font-size:15px}
 <h2>3. Permissões do Android</h2>
 <table>
 <tr><th>Permissão</th><th>Uso</th></tr>
+<tr><td>Câmera (pelo app de câmera do celular)</td><td>O Modo Seca não pede a permissão de câmera: ele abre o app de câmera do próprio celular só quando você toca em "Tirar foto".</td></tr>
 <tr><td>Atividade física (reconhecimento de atividade)</td><td>Ler o sensor de passos do próprio celular. É opcional: o app só pede quando você toca em "Ativar contagem automática", e você pode negar e digitar os passos à mão.</td></tr>
 <tr><td>Executar na inicialização</td><td>Voltar a ler o sensor de passos depois que o celular é reiniciado.</td></tr>
 <tr><td>Vibração</td><td>Avisar o fim do tempo de descanso no treino.</td></tr>
@@ -69,19 +71,22 @@ footer{margin-top:48px;color:var(--muted);font-size:15px}
 <h2>4. Backup</h2>
 <p>O próprio Android pode incluir os dados de apps no backup da sua conta Google, se você tiver ativado essa opção no celular. Esse backup é feito e protegido pelo Google, segue a política de privacidade do Google, e o desenvolvedor do Modo Seca não tem acesso a ele. Dentro do app, em Ajustes, você também pode copiar um backup em texto e guardá-lo onde quiser.</p>
 
-<h2>5. Links externos</h2>
+<h2>5. Foto do prato com o app Claude</h2>
+<p>O cálculo de calorias por foto é opcional. Quando você toca em "Tirar foto" ou "Galeria", a foto fica no armazenamento temporário do Modo Seca (é apagada em até um dia) e é enviada, pelo recurso "Compartilhar" do próprio Android, para o app Claude, da Anthropic, que você instala e usa com a sua própria conta. O Modo Seca não envia a foto para nenhum servidor nosso e não recebe nada do Claude diretamente: ele só lê, da área de transferência, a linha de código que começa com "MS|" e que você mesmo copiou da resposta. A leitura da área de transferência acontece apenas depois que você envia uma foto ao Claude ou toca em "Já copiei", e o app procura somente esse código. O uso do Claude segue os termos e a <a href="https://www.anthropic.com/legal/privacy">política de privacidade da Anthropic</a>. O Modo Seca não tem relação comercial com a Anthropic.</p>
+
+<h2>6. Links externos</h2>
 <p>O botão de vídeo de cada exercício abre uma busca no YouTube, no seu navegador ou no app do YouTube. Fora do Modo Seca, vale a política de privacidade desses serviços.</p>
 
-<h2>6. Como apagar seus dados</h2>
+<h2>7. Como apagar seus dados</h2>
 <p>Em Ajustes, toque em "Apagar tudo". Você também pode limpar os dados do app nas configurações do Android ou simplesmente desinstalá-lo. Como não guardamos nada em servidor, não existe cópia dos seus dados com a gente.</p>
 
-<h2>7. Idade mínima e saúde</h2>
+<h2>8. Idade mínima e saúde</h2>
 <p>O Modo Seca é destinado a maiores de 18 anos. O app dá orientações gerais de alimentação e exercício e não substitui médico ou nutricionista.</p>
 
-<h2>8. Seus direitos (LGPD)</h2>
+<h2>9. Seus direitos (LGPD)</h2>
 <p>A Lei Geral de Proteção de Dados (Lei 13.709/2018) garante seus direitos sobre dados pessoais. Como o Modo Seca não coleta nem trata seus dados fora do seu celular, você mantém controle total sobre eles e pode consultá-los, corrigi-los ou apagá-los no próprio app a qualquer momento. Se tiver qualquer pedido ou dúvida, fale com a gente no e-mail acima.</p>
 
-<h2>9. Mudanças nesta política</h2>
+<h2>10. Mudanças nesta política</h2>
 <p>Se esta política mudar, a nova versão será publicada nesta página com a data de atualização. Se uma versão futura do app passar a coletar algum dado, isso será informado antes, no app e aqui.</p>
 
 <footer>Modo Seca · Luiz Igerski · <a href="mailto:modoseca.app@gmail.com">modoseca.app@gmail.com</a></footer>
