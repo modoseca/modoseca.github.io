@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.luizigerski.modoseca",
+      "sha256_cert_fingerprints": [
+        "36:B1:19:B0:93:F1:A2:19:F7:BF:A0:00:0F:F6:4E:C6:28:B7:9B:33:3D:92:65:BD:B9:BE:E1:F4:87:70:F2:8A"
+      ]
+    }
+  }
+]
